@@ -1,0 +1,153 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #80BCBD;
+}
+
+header {
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+header p {
+    color: #637E76;
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: "Nova Square";
+    padding: 100px 30px 10px 5%;
+}
+
+footer {
+    background: #4C6793;
+    color: #D1D1D1;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    display: flex;
+    gap: 10px;
+    margin: 5px 30px 5px 30px;
+}
+
+.newTask {
+    margin: 5px 30px 25px 75px;
+}
+
+input {
+    background-color: #607274;
+    color: #A3C7D6;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #DADDB1;
+    padding: 5px 10px;
+    height: 35px;
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+
+
+.btn {
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    min-height: 35px;
+    max-width: 35px;
+    max-height: 35px;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+    opacity: 50%;
+    background-size: cover;
+    border-radius: 10%;
+    background-image: url("./images/plain.png");
+}
+
+.add {
+    background-image: url("./images/add.png");
+}
+
+.checked {
+    background-image: url("./images/check.png");
+}
+
+.edit {
+    background-image: url("./images/edit.png");
+}
+
+.delete {
+    background-image: url("./images/delete.png");
+}
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+#tasks {  
+    height: 245px;
+    overflow-y: overlay;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid #BDD7ED;
+    background-color: #4C6793;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #BDD7ED;
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: #A3C7D6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input[type=text]:focus {
+    color: aquamarine;
+    outline: 2px solid orange;
+}
+
+input[type=text].visited {
+    color: aquamarine;
+    outline: 2px solid orange;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: #4C6793;
+    background: #80BCBD
+}
+
+::selection {
+    color: #4C6793;
+    background: #80BCBD
+}
