@@ -39,18 +39,21 @@ footer {
 #root {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    flex-wrap: wrap;
+    flex: 1;   
 }
 
 .wrapper {
     display: flex;
     gap: 10px;
-    margin: 5px 30px 5px 30px;
+    margin: 5px 60px 5px 60px;
 }
 
 .newTask {
-    margin: 5px 30px 25px 75px;
+    margin-bottom: 35px;
+}
+
+.horizontalLine {
+    margin-bottom: 35px;
 }
 
 input {
@@ -64,8 +67,6 @@ input {
     font-size: 0.9em;
     font-weight: 100;
 }
-
-
 
 .btn {
     width: 35px;
@@ -104,7 +105,7 @@ input {
     text-decoration-thickness: 2px;
 }
 
-#tasks {  
+#tasks {
     height: 245px;
     overflow-y: overlay;
     overflow-x: hidden;

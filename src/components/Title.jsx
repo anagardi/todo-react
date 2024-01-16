@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { CompleteContext, URLContext, IdContext, TitleContext, TasksListContext } from "./Context";
 import axios from "axios";
 
-function Title({ isOptimistic }, props) {
+function Title(props, {isOptimistic}) {
 
     const { todosList, setTodoList } = useContext(TasksListContext);
 
@@ -40,6 +40,7 @@ function Title({ isOptimistic }, props) {
     }
 
     function handleChange(e) {
+        // console.log("input value changed");
         setTitle(e.target.value);
         setChanged(true);
     }
@@ -52,12 +53,13 @@ function Title({ isOptimistic }, props) {
     }
 
     return (
-        <input
-            {...props}
+        <input            
             type="text"
             className={"title" + (complete && " completed")}
             readOnly={complete}
             value={title}
+            placeholder={props.placeholder}
+            autoComplete={props.autoComplete}
             onChange={handleChange}
             onBlur={handleOnBlur}
             onKeyDown={handleKeyDown}

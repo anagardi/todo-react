@@ -10,7 +10,7 @@ function App() {
 
     const port = 8000;
 
-    const [url, setUrl] = useState(`http://localhost:${port}/api/post`);
+    const [url, setUrl] = useState(`http://localhost:${port}/api/item`);
     const urlValue = { url, setUrl };
 
     const [todosList, setTodoList] = useState([]);

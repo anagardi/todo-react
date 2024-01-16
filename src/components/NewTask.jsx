@@ -4,7 +4,9 @@ import Title from "./Title";
 import { URLContext, TitleContext, TasksListContext } from "./Context";
 import axios from "axios";
 
-function NewTask({ isOptimistic }) {
+function NewTask({isOptimistic}) {
+
+    // console.log("isOptimistic.current: ", isOptimistic.current);
 
     const { url } = useContext(URLContext);
     const { todosList, setTodoList } = useContext(TasksListContext);
@@ -34,12 +36,13 @@ function NewTask({ isOptimistic }) {
 
     return (
         <TitleContext.Provider value={titleValue}>
-            <form onSubmit={handleOnSubmit}>
+            <form onSubmit={handleOnSubmit} >
                 <div className="wrapper newTask">
                     <Title placeholder="Add new task" autoComplete="off" value={title} />
-                    <Add />
-                </div>
-            </form >
+                    <Add />                    
+                </div>     
+                <hr className="horizontalLine"/>          
+            </form >           
         </TitleContext.Provider >
     );
 }
